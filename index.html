@@ -15,14 +15,59 @@
     <script src="js/main.js"></script>
     <script>
         $(function () {
-            var swiper = new Swiper(".itemSwiper", {
-                slidesPerView: 3,
+            var swiper = new Swiper(".bestSwiper", {
+                slidesPerView: 1.6,
                 spaceBetween: 40,
+                breakpoints: {
+                    550: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 20,
+                    },
+                    800: {
+                        slidesPerView: 3,
+                        spaceBetween: 35,
+                    },
+                    1024: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 40,
+                    },
+                    1200: {
+                        slidesPerView: 4.4,
+                        spaceBetween: 40,
+                    },
+                    1400: {
+                        slidesPerView: 5,
+                        spaceBetween: 35,
+                    },
+                },
+
+            });
+
+            var swiper = new Swiper(".itemSwiper", {
+                slidesPerView: 2.1,
+                spaceBetween: 40,
+                breakpoints: {
+                    550: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1400: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                },
+
                 scrollbar: {
                     el: ".swiper-scrollbar",
                     hide: false,
                 },
             });
+
+
 
         });//script end
     </script>
@@ -31,125 +76,6 @@
 <body>
     <div id="wrap">
         <header class="header_wrap">
-            <div class="banner">
-                <span>카카오 회원가입 시, 5,000원 할인쿠폰 발행 (쿠폰유효기간 발행 후 1주일)</span>
-                <button type="button" class="banner_close">
-                    <img src="img/close.png" alt="닫기">
-                </button>
-            </div><!-- .banner end -->
-
-            <div class="header">
-                <div class="inner">
-                    <h1 class="logo">
-                        <a href="#"><img src="img/logo.png" alt=""></a>
-                    </h1>
-                    <div class="nav_wrap">
-                        <nav class="nav">
-                            <ul class="gnb">
-                                <li>
-                                    <a href="#" class="depth-01">RAWROW</a>
-
-                                    <div class="subMenu_wrap">
-                                        <ul class="depth-02">
-                                            <li>
-                                                <span>TRUNK</span>
-
-                                                <ul class="depth-03">
-                                                    <li><a href="#">ALUMINIUM</a></li>
-                                                    <li><a href="#">FRAME</a></li>
-                                                    <li><a href="#">LITE</a></li>
-                                                    <li><a href="#">CONVERTABLE</a></li>
-                                                    <li><a href="#">PRO&PILOT</a></li>
-                                                    <li><a href="#">CABINET</a></li>
-                                                    <li><a href="#">SAQUARE</a></li>
-                                                    <li><a href="#">ACC</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <span>BAG</span>
-
-                                                <ul class="depth-03">
-                                                    <li><a href="#">BACKPACK</a></li>
-                                                    <li><a href="#">CROSS BAG</a></li>
-                                                    <li><a href="#">TOTE BAG</a></li>
-                                                    <li><a href="#">SLING BAG</a></li>
-                                                    <li><a href="#">COLLAB</a></li>
-                                                    <li><a href="#">OTHERS</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <span>EYEWEAR</span>
-
-                                                <ul class="depth-03">
-                                                    <li><a href="#">SIGNATURE</a></li>
-                                                    <li><a href="#">THIN</a></li>
-                                                    <li><a href="#">BOLD</a></li>
-                                                    <li><a href="#">CLIP</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <span>ACC</span>
-
-                                                <ul class="depth-03">
-                                                    <li><a href="#">POUCH</a></li>
-                                                    <li><a href="#">TRUNK ACC</a></li>
-                                                    <li><a href="#">LITE</a></li>
-                                                    <li><a href="#">OTHERS</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul><!-- .depth-02 end -->
-
-                                        <div class="promotion">
-                                            <span>LAST CHANCE</span>
-
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <img src="img/menu-01.png" alt="">
-                                                        <p>FRAME ep.2 84L/20''</p>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">
-                                                        <img src="img/menu-02.png" alt="">
-                                                        <p>FRAME ep.2 115L/30''</p>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div><!-- promotion end -->
-                                    </div><!-- .subMenu_wrap end -->
-                                </li>
-
-                                <li>
-                                    <a href="#" class="depth-01">NAUTICA</a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="depth-01">BRANDS</a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="depth-01">SALE</a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="depth-01">PT</a>
-                                </li>
-                            </ul><!-- .gnb end -->
-                        </nav><!-- .nav end -->
-
-                        <div class="btn_wrap">
-                            <a href="#"><img src="img/search.png" alt="search"></a>
-                            <a href="#"><img src="img/shop.png" alt="shop"></a>
-                            <a href="#"><img src="img/user.png" alt="user"></a>
-                        </div><!-- .btn_wrap end -->
-                    </div><!-- .nav_wrap end -->
-                </div><!-- .inner end -->
-            </div><!-- .header end -->
         </header><!-- .header_wrap end -->
 
         <main class="main">
@@ -163,81 +89,84 @@
                         <h3>BEST PICK</h3>
                     </div><!-- .title end -->
 
-                    <div class="item_wrap">
-                        <div class="item">
-                            <a href="#"><img src="img/sec01-01.png" alt=""></a>
+                    <!-- bestSwiper -->
+                    <div class="swiper bestSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" class="item">
+                                <a href="#"><img src="img/sec01-01.png" alt=""></a>
 
-                            <div class="text">
-                                <div class="category">
-                                    <span>[RAWROW] STRING SERIES</span>
-                                    <a href="#"><img src="img/like.png" alt=""></a>
-                                </div><!-- .category end -->
+                                <div class="text">
+                                    <div class="category">
+                                        <span>[RAWROW] STRING SERIES</span>
+                                        <a href="#"><img src="img/like.png" alt=""></a>
+                                    </div><!-- .category end -->
 
-                                <p class="name">RUCKSACK ep.2 976 / 20L</p>
-                                <p class="price">399,490원</p>
-                            </div><!-- .text end -->
-                        </div><!-- .item end -->
+                                    <p class="name">RUCKSACK ep.2 976 / 20L</p>
+                                    <p class="price">399,490원</p>
+                                </div><!-- .text end -->
+                            </div><!-- .swiper-slide end -->
 
-                        <div class="item">
-                            <a href="#"><img src="img/sec01-02.png" alt=""></a>
+                            <div class="swiper-slide" class="item">
+                                <a href="#"><img src="img/sec01-02.png" alt=""></a>
 
-                            <div class="text">
-                                <div class="category">
-                                    <span>[RAWROW] STRING SERIES</span>
-                                    <a href="#"><img src="img/like.png" alt=""></a>
-                                </div><!-- .category end -->
+                                <div class="text">
+                                    <div class="category">
+                                        <span>[RAWROW] STRING SERIES</span>
+                                        <a href="#"><img src="img/like.png" alt=""></a>
+                                    </div><!-- .category end -->
 
-                                <p class="name">RUCKSACK ep.2 976 / 20L</p>
-                                <p class="sale">439,000원</p>
-                                <p class="price">
-                                    399,490원
-                                    <span>9%</span>
-                                </p>
-                            </div><!-- .text end -->
-                        </div><!-- .item end -->
+                                    <p class="name">RUCKSACK ep.2 976 / 20L</p>
+                                    <p class="sale">439,000원</p>
+                                    <p class="price">
+                                        399,490원
+                                        <span>9%</span>
+                                    </p>
+                                </div><!-- .text end -->
+                            </div><!-- .swiper-slide end -->
 
-                        <div class="item">
-                            <a href="#"><img src="img/sec01-03.png" alt=""></a>
+                            <div class="swiper-slide" class="item">
+                                <a href="#"><img src="img/sec01-03.png" alt=""></a>
 
-                            <div class="text">
-                                <div class="category">
-                                    <span>[RAWROW] STRING SERIES</span>
-                                    <a href="#"><img src="img/like.png" alt=""></a>
-                                </div><!-- .category end -->
+                                <div class="text">
+                                    <div class="category">
+                                        <span>[RAWROW] STRING SERIES</span>
+                                        <a href="#"><img src="img/like.png" alt=""></a>
+                                    </div><!-- .category end -->
 
-                                <p class="name">RUCKSACK ep.2 976 / 20L</p>
-                                <p class="price">399,490원</p>
-                            </div><!-- .text end -->
-                        </div><!-- .item end -->
+                                    <p class="name">RUCKSACK ep.2 976 / 20L</p>
+                                    <p class="price">399,490원</p>
+                                </div><!-- .text end -->
+                            </div><!-- .swiper-slide end -->
 
-                        <div class="item">
-                            <a href="#"><img src="img/sec01-04.png" alt=""></a>
+                            <div class="swiper-slide" class="item">
+                                <a href="#"><img src="img/sec01-04.png" alt=""></a>
 
-                            <div class="text">
-                                <div class="category">
-                                    <span>[RAWROW] STRING SERIES</span>
-                                    <a href="#"><img src="img/like.png" alt=""></a>
-                                </div><!-- .category end -->
+                                <div class="text">
+                                    <div class="category">
+                                        <span>[RAWROW] STRING SERIES</span>
+                                        <a href="#"><img src="img/like.png" alt=""></a>
+                                    </div><!-- .category end -->
 
-                                <p class="name">RUCKSACK ep.2 976 / 20L</p>
-                                <p class="price">399,490원</p>
-                            </div><!-- .text end -->
-                        </div><!-- .item end -->
+                                    <p class="name">RUCKSACK ep.2 976 / 20L</p>
+                                    <p class="price">399,490원</p>
+                                </div><!-- .text end -->
+                            </div><!-- .swiper-slide end -->
 
-                        <div class="item">
-                            <a href="#"><img src="img/sec01-05.png" alt=""></a>
+                            <div class="swiper-slide" class="item">
+                                <a href="#"><img src="img/sec01-05.png" alt=""></a>
 
-                            <div class="text">
-                                <div class="category">
-                                    <span>[RAWROW] STRING SERIES</span>
-                                    <a href="#"><img src="img/like.png" alt=""></a>
-                                </div><!-- .category end -->
+                                <div class="text">
+                                    <div class="category">
+                                        <span>[RAWROW] STRING SERIES</span>
+                                        <a href="#"><img src="img/like.png" alt=""></a>
+                                    </div><!-- .category end -->
 
-                                <p class="name">RUCKSACK ep.2 976 / 20L</p>
-                                <p class="price">399,490원</p>
-                            </div><!-- .text end -->
-                        </div><!-- .item end -->
-                    </div><!-- .item_wrap end -->
+                                    <p class="name">RUCKSACK ep.2 976 / 20L</p>
+                                    <p class="price">399,490원</p>
+                                </div><!-- .text end -->
+                            </div><!-- .swiper-slide end -->
+                        </div><!-- .swiper-wrapper end -->
+                    </div><!-- .swiper end -->
                 </div><!-- .inner end -->
             </section><!-- .section-01 end -->
 
@@ -426,24 +355,28 @@
                         <a href="#">VIEW MORE</a>
                     </div><!-- .title end -->
 
-                    <div class="image_wrap">
-                        <img src="img/sec05-01.png" alt="LOOK BOOK">
-                        <img src="img/sec05-02.png" alt="LOOK BOOK">
-                        <img src="img/sec05-03.png" alt="LOOK BOOK">
-                        <img src="img/sec05-04.png" alt="LOOK BOOK">
-                        <img src="img/sec05-05.png" alt="LOOK BOOK">
-                        <img src="img/sec05-06.png" alt="LOOK BOOK">
-                        <img src="img/sec05-07.png" alt="LOOK BOOK">
-                        <img src="img/sec05-08.png" alt="LOOK BOOK">
-                        <img src="img/sec05-09.png" alt="LOOK BOOK">
-                        <img src="img/sec05-10.jpg" alt="LOOK BOOK">
+                    <div class="lookbook_wrap">
+                        <div class="image_wrap">
+                            <img src="img/sec05-01.png" alt="LOOK BOOK">
+                            <img src="img/sec05-02.png" alt="LOOK BOOK">
+                            <img src="img/sec05-03.png" alt="LOOK BOOK">
+                            <img src="img/sec05-04.png" alt="LOOK BOOK">
+                            <img src="img/sec05-05.png" alt="LOOK BOOK">
+                        </div><!-- .image_wrap end -->
+
+                        <div class="image_wrap">
+                            <img src="img/sec05-06.png" alt="LOOK BOOK">
+                            <img src="img/sec05-07.png" alt="LOOK BOOK">
+                            <img src="img/sec05-08.png" alt="LOOK BOOK">
+                            <img src="img/sec05-09.png" alt="LOOK BOOK">
+                            <img src="img/sec05-10.jpg" alt="LOOK BOOK">
+                        </div><!-- .image_wrap end -->
                     </div><!-- .image_wrap end -->
                 </div><!-- .inner end -->
             </section><!-- section-05. end -->
         </main>
 
         <footer class="footer">
-            
         </footer><!-- .footer end -->
     </div><!-- #wrap end -->
 </body>
