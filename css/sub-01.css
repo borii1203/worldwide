@@ -2,6 +2,17 @@
 @import url('reset.css');
 @import url('../font/pretendard/stylesheet.css');
 
+
+@keyframes line_show {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 html,
 body {
     font-size: 62.5%;
@@ -36,6 +47,17 @@ section {
     margin: 0 auto;
 }
 
+.view_more {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.6rem;
+    text-align: center;
+    border: 1px solid #4C4C4C;
+    white-space: nowrap;
+}
+
 /* header */
 .header {
     width: 100%;
@@ -60,15 +82,6 @@ section {
     font-size: 1.8rem;
 }
 
-.view_more {
-    display: block;
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.6rem;
-    text-align: center;
-    border: 1px solid #4C4C4C;
-}
 
 /* main_vsiual */
 .main_visual {
@@ -123,7 +136,6 @@ section {
 /* section-02 */
 .section-02 .inner {
     display: flex;
-    align-items: center;
     position: relative;
 }
 
@@ -139,19 +151,20 @@ section {
     left: 0;
 }
 
-.section-02 .line {
+.section-02 .title {
     width: 32%;
     position: relative;
-}
-
-.section-02 .line .title {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding: 27px 27px 0 0;
 }
 
-.section-02 .line::before {
+.section-02 .title h3 {
+    margin-bottom: 35px;
+}
+
+.section-02 .title::before {
     content: '';
     display: block;
     width: 1px;
@@ -163,12 +176,145 @@ section {
     right: 0;
 }
 
-.section-02 img {
+.section-02 .image {
     width: 68%;
+    padding: 27px 27px 0 27px;
+}
+
+.section-02 img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
+
+
 /* section-03 */
+.section-03 .title {
+    margin-bottom: 50px;
+}
+
+.section-03 .detail_wrap {
+    width: 100%;
+    position: relative;
+}
+
+.section-03 .main_image {
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.section-03 .inner .main_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.section-03 .inner .info_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-03 .inner .info_wrap .vertical {
+    width: 21.43%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 130px;
+    justify-content: space-between;
+}
+
+.section-03 .inner .info_wrap .vertical .info img {
+    width: 100%;
+}
+
+.section-03 .inner .info_wrap .info .text p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #F67145;
+}
+
+.section-03 .inner .info_wrap .info .text span {
+    font-size: 1.6rem;
+    color: #4c4c4c;
+}
+
+.section-03 .inner .info_wrap .info {
+    position: relative;
+}
+
+/* info_wrap_left */
+.section-03 .inner .info_wrap .info .line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: line_show 1.5s linear forwards;
+}
+
+.section-03 .inner .info_wrap .info .line_wrap {
+    position: absolute;
+}
+
+.section-03 .inner .info_wrap .info .line_wrap p {
+    position: absolute;
+}
+
+.section-03 .inner .info_wrap .info .line_wrap p::before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #F67145;
+    opacity: 0.7;
+}
+
+.section-03 .inner .info_wrap .info .line_wrap p::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #F67145;
+}
+
+.section-03 .inner .info_wrap .left .info:first-child {
+    transform: translateX(60px);
+}
+
+.section-03 .inner .info_wrap .left .info:first-child .line_wrap {
+    top: 20%;
+    left: 80%;
+}
+
+.section-03 .inner .info_wrap .left .info:first-child .line_wrap p {
+    top: 90px;
+    right: 60px;
+}
+
+.section-03 .inner .info_wrap .left .info:last-child .line_wrap {
+    bottom: 20%;
+    left: 110%;
+}
+
+.section-03 .inner .info_wrap .left .info:last-child .line_wrap p {
+    right: 35px;
+    top: -9px;
+}
+
+/* info_wrap_right */
+.section-03 .inner .info_wrap .right .info:first-child .line_wrap {
+    top: 100%;
+    left: -90%;
+}
 
 
 /* section-04 */
@@ -201,15 +347,9 @@ section {
     justify-content: space-between;
 }
 
+
+
 /* section-05 */
-.section-05 {
-    height: 700px;
-}
-
-.section-05 .inner {
-    height: 100%;
-}
-
 .section-05 .title_wrap {
     width: 100%;
     margin-bottom: 50px;
@@ -220,13 +360,13 @@ section {
 
 .section-05 .collabo_wrap {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     padding-inline: 100px;
 }
 
 .section-05 .collabo_wrap .history {
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -240,7 +380,7 @@ section {
     display: block;
     height: 100%;
     width: 3px;
-    background-color: #444;
+    background-color: #818181;
     position: absolute;
     left: 117.5px;
     top: 0;
@@ -276,7 +416,7 @@ section {
 
 .section-05 .image_wrap {
     width: 60%;
-    height: 100%;
+    height: 700px;
 }
 
 .section-05 .image {
@@ -305,20 +445,13 @@ section {
     color: #fff;
 }
 
-
-
 .section-05 .image {
     display: none;
 }
 
-
 .section-05 .image:first-child {
     display: block;
 }
-
-
-
-
 
 /* section-06 */
 .section-06 .inner {
@@ -364,6 +497,7 @@ section {
 
 .section-06 iframe {
     width: 100%;
+    height: 400px;
     margin-bottom: 32px;
 }
 
@@ -384,8 +518,15 @@ section {
 }
 
 @media screen and (max-width: 1200px) {
+    .section-02 .title {
+        padding: 12px 12px 0 0;
+    }
 
-    .section-05 {
+    .section-02 .image {
+        padding: 12px 12px 0 12px;
+    }
+
+    .section-05 .image_wrap {
         height: 500px;
     }
 
@@ -412,9 +553,18 @@ section {
 }
 
 @media screen and (max-width: 1024px) {
+
     html,
     body {
         font-size: 56.25%;
+    }
+
+    .section-01 .inner {
+        row-gap: 20px;
+    }
+
+    .section-01 .inner .image .text {
+        padding: 0 24px 24px 0;
     }
 
     .section-05 .image p {
@@ -457,7 +607,7 @@ section {
 }
 
 @media screen and (max-width: 920px) {
-    .section-05 {
+    .section-05 .image_wrap {
         height: 450px;
     }
 
@@ -486,6 +636,12 @@ section {
         font-size: 50%;
     }
 
+    .view_more {
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+    }
+
     .pc {
         display: none;
     }
@@ -494,12 +650,73 @@ section {
         display: block;
     }
 
+    .section-01 .inner {
+        row-gap: 12px;
+    }
+
+    .section-01 .inner .image .text {
+        padding: 0 16px 16px 0;
+    }
+
+    .section-05 .title_wrap .title {
+        padding-right: 10px;
+    }
+
+    .section-05 .title_wrap {
+        margin-bottom: 30px;
+    }
+
     .section-05 .collabo_wrap {
         display: block;
+        padding-top: 30px;
+    }
+
+    .section-05 .collabo_wrap .history {
+        flex-direction: unset;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        padding-inline: 20px;
+        margin-bottom: 20px;
+    }
+
+    .section-05 .collabo_wrap .history::before {
+        width: 100%;
+        height: 3px;
+        left: 0;
+        top: -17.5px;
+    }
+
+    .section-05 .collabo_wrap .history h6 {
+        display: inline-block;
+    }
+
+    .section-05 .collabo_wrap .history h6::before {
+        top: -25px;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     .section-05 .image_wrap {
         width: 100%;
+        height: auto;
+    }
+
+    .section-05 .image {
+        overflow: visible;
+    }
+
+    .section-05 .image img {
+        filter: none;
+        height: 400px;
+    }
+
+    .section-05 .image p {
+        font-size: 2.5rem;
+        padding: 0;
+        margin-top: 20px;
+        position: static;
+        color: inherit;
     }
 
     .section-06 .title {
@@ -512,5 +729,32 @@ section {
 
     .section-06 iframe {
         margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .section-01 .inner .image .text {
+        padding: 0 8px 8px 0;
+    }
+
+    .section-05 .title_wrap {
+        display: block;
+    }
+
+    .section-05 .title_wrap .title {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .section-05 .collabo_wrap .history li {
+        font-size: 1.5rem;
+    }
+
+    .section-06 .info_wrap .info dl {
+        margin-bottom: 12px;
+    }
+
+    .section-06 iframe {
+        height: 250px;
     }
 }
