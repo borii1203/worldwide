@@ -2,7 +2,6 @@
 @import url('reset.css');
 @import url('../font/pretendard/stylesheet.css');
 
-
 @keyframes line_show {
     0% {
         stroke-dashoffset: 1000;
@@ -254,6 +253,7 @@ section {
 }
 
 .section-03 .inner .info_wrap .info .line_wrap {
+    width: 100%;
     position: absolute;
 }
 
@@ -291,31 +291,46 @@ section {
 }
 
 .section-03 .inner .info_wrap .left .info:first-child .line_wrap {
-    top: 20%;
-    left: 80%;
+    top: 21%;
+    left: 117%;
 }
 
 .section-03 .inner .info_wrap .left .info:first-child .line_wrap p {
-    top: 90px;
-    right: 60px;
+    bottom: -15px;
+    right: -10px;
 }
 
 .section-03 .inner .info_wrap .left .info:last-child .line_wrap {
-    bottom: 20%;
-    left: 110%;
+    bottom: 5%;
+    left: 118%;
 }
 
 .section-03 .inner .info_wrap .left .info:last-child .line_wrap p {
-    right: 35px;
-    top: -9px;
+    right: -15px;
+    top: -10px;
 }
 
 /* info_wrap_right */
 .section-03 .inner .info_wrap .right .info:first-child .line_wrap {
-    top: 100%;
-    left: -90%;
+    top: 78%;
+    left: -99%;
+    z-index: -1;
+}
+.section-03 .inner .info_wrap .right .info:first-child .line_wrap p {
+    left: -15px;
+    bottom: -7px;
 }
 
+.section-03 .inner .info_wrap .right .info:last-child .line_wrap {
+    top: 39%;
+    right: 98%;
+    z-index: -1;
+}
+
+.section-03 .inner .info_wrap .right .info:last-child .line_wrap p {
+    left: -25px;
+    top: -7px;
+}
 
 /* section-04 */
 .section-04 {
