@@ -36,21 +36,21 @@
     object-fit: cover;
 }
 
-.item_wrap img {
+.swiper-slide img {
     display: block;
 }
 
-.item_wrap .text {
+.swiper-slide .text {
     margin-top: 8px;
 }
 
-.item_wrap .text .category {
+.swiper-slide .text .category {
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
 
-.item_wrap .text .category span {
+.swiper-slide .text .category span {
     font-size: 1.4rem;
     font-weight: 400;
     color: #A8A8A8;
