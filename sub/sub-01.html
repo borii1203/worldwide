@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="../css/sub-01.css">
 
     <script src="../lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            $(window).on('scroll', function () {
+                let scrollBar = $(this).scrollTop();
+
+                console.log(scrollBar);
+
+                if (scrollBar >= 2000) {
+                    $('.sec02_line').addClass('scrollE');
+                }
+
+                if (scrollBar >= 5200) {
+                    $('.sec06_line').addClass('scrollE');
+                }
+            });//스크롤 시 라인이벤트
+        });//script end
+    </script>
 </head>
 
 <body>
@@ -74,8 +91,8 @@
         </section><!-- .section-01 end -->
 
         <section class="section-02">
-            <div class="inner">
-                <div class="title">
+            <div class="inner sec02_line">
+                <div class="title sec02_line">
                     <h3>R TRUNK는 보이지 않는 기능을 고려하는 것으로부터 시작되었습니다.</h3>
 
                     <p>‘가장 많은 짐을 가장 쉽게 옮길 수 있는 방법'에 대한 집요한 탐구로부터 R TRUNK만의 조형적 요소와 비례, 구조학적 디테일, 심미적 기능적 요소를 갖추게
@@ -132,10 +149,10 @@
 
                                 <div class="line_wrap">
                                     <p></p>
-                                    <svg class="line" width="100%" height="auto" viewBox="0 0 392 364" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M392 1H228.928V363H0" stroke="#818181" />
-                                    </svg>
+                                    <svg class="line" width="100%" height="auto" viewBox="0 0 392 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M392 1H228.928V269H0" stroke="#818181"/>
+</svg>
+
                                 </div><!-- .line_wrap end -->
                             </div><!-- .info end -->
                         </div><!-- .left end -->
@@ -151,10 +168,9 @@
 
                                 <div class="line_wrap">
                                     <p></p>
-                                    <svg width="100%" height="auto" viewBox="0 0 374 232" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.618652 231H372.982V0" stroke="#818181" />
-                                    </svg>
+                                    <svg class="line" width="auto" height="300" viewBox="0 0 180 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 257H80.2228V1H180" stroke="#818181" stroke-width="0.5"/>
+</svg>
 
                                 </div><!-- .line_wrap end -->
                             </div><!-- .info end -->
@@ -170,10 +186,10 @@
 
                                 <div class="line_wrap">
                                     <p></p>
-                                    <svg width="100%" height="auto" viewBox="0 0 206 38" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 1H43.206V37H206" stroke="#818181" />
-                                    </svg>
+                                    <svg class="line" width="100%" height="auto" viewBox="0 0 210 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 1H46V39.5H209.5" stroke="#818181" stroke-width="0.5"/>
+</svg>
+
                                 </div><!-- .line_wrap end -->
                             </div><!-- .info end -->
                         </div><!-- .left end -->
@@ -284,8 +300,8 @@
         </section><!-- .section-05 end -->
 
         <section class="section-06">
-            <div class="inner">
-                <div class="title">
+            <div class="inner sec06_line">
+                <div class="title sec06_line">
                     <h3>CONTATCT US</h3>
                 </div><!-- .title end -->
 
