@@ -205,6 +205,20 @@ section {
 
 .section-02 .title h3 {
     margin-bottom: 35px;
+    position: relative;
+}
+
+.section-02 .inner .title h3::before {
+    content: '';
+    width: 200px;
+    height: 40px;
+    background: url('../img/sub_img/highlight_01.png') center center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    z-index: -1;
+    transform-origin: left center;
+    transition: 1s;
 }
 
 .section-02 .title::before {
@@ -238,6 +252,21 @@ section {
 /* section-03 */
 .section-03 .title {
     margin-bottom: 50px;
+}
+
+.section-03 .title h3 {
+    position: relative;
+}
+
+.section-03 .inner .title h3::before {
+    content: '';
+    width: 150px;
+    height: 40px;
+    background: url('../img/sub_img/highlight_02.png') center center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .section-03 .detail_wrap {
@@ -425,6 +454,19 @@ section {
 
 
 /* section-05 */
+.section-05 .inner .title h3 {
+    position: relative;
+}
+.section-05 .inner .title h3::before {
+    content: '';
+    width: 280px;
+    height: 50px;
+    background: url('../img/sub_img/highlight_03.png') center center /contain no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 .section-05 .title_wrap {
     width: 100%;
     margin-bottom: 50px;
@@ -454,10 +496,10 @@ section {
     content: '';
     display: block;
     height: 100%;
-    width: 3px;
+    width: 2px;
     background-color: #818181;
     position: absolute;
-    left: 117.5px;
+    left: 118px;
     top: 0;
     z-index: -1;
 }
@@ -570,6 +612,20 @@ section {
     top: 0;
 }
 
+.section-06 .inner .title h3 {
+    position: relative;
+}
+.section-06 .inner .title h3::before {
+    content: '';
+    width: 220px;
+    height: 50px;
+    background: url('../img/sub_img/highlight_04.png') center center /contain no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .section-06 .inner.scrollE::before {
     transform: scaleX(1);
 }
@@ -604,6 +660,49 @@ section {
 .section-06 .info_wrap .info dd {
     font-size: 1.6rem;
     color: #424242;
+}
+
+/* footer */
+.footer {
+    border-top: 1px solid #818181;
+}
+.footer .inner {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 100px;
+}
+
+.footer .inner .left p {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.footer .inner .left p:last-child {
+    margin-bottom: 0;
+}
+.footer .inner .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer .inner .right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 50px;
+    border: 1px solid #1A1A1A;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #F67145;
+}
+.footer .inner .right span {
+    display: block;
+}
+.footer .inner .right .copy {
+    font-size: 1.4rem;
+    color: #818181;
 }
 
 @media screen and (max-width: 1200px) {

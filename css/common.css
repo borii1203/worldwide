@@ -143,12 +143,12 @@ section {
 .header .nav .gnb .subMenu_wrap .depth-03 li {
     font-size: 1.4rem;
     color: #4C4C4C;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .header .nav .gnb .subMenu_wrap .promotion {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 24px;
 }
 
 .header .nav .gnb .subMenu_wrap .promotion span {
