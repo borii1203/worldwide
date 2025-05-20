@@ -79,6 +79,21 @@ section {
     position: fixed;
     top: 0;
     z-index: 999;
+    transform: translateY(0);
+    transition: transform 0.5s;
+}
+
+.header.scrolled {
+    transform: translateY(-100%);
+}
+
+
+.header.invert {
+    background-color: #fff;
+}
+
+.header.invert .gnb li a {
+    filter: invert(1);
 }
 
 .header .inner {
@@ -178,7 +193,7 @@ section {
     height: 1px;
     transform: scaleX(0);
     transform-origin: center;
-    transition: 2s;
+    transition: transform 2s;
     background-color: #818181;
 
     position: absolute;
@@ -228,7 +243,7 @@ section {
     height: 100%;
     transform: scaleY(0);
     transform-origin: top;
-    transition: 2s;
+    transition: transform 2s;
     background-color: #818181;
 
     position: absolute;
@@ -383,9 +398,11 @@ section {
     bottom: -15px;
     right: -10px;
 }
-.section-03 .inner .info_wrap .left .info:last-child{
+
+.section-03 .inner .info_wrap .left .info:last-child {
     transform: translateX(80px);
 }
+
 .section-03 .inner .info_wrap .left .info:last-child .line_wrap {
     bottom: 20%;
     left: 110%;
@@ -457,6 +474,7 @@ section {
 .section-05 .inner .title h3 {
     position: relative;
 }
+
 .section-05 .inner .title h3::before {
     content: '';
     width: 280px;
@@ -467,6 +485,7 @@ section {
     left: 0;
     z-index: -1;
 }
+
 .section-05 .title_wrap {
     width: 100%;
     margin-bottom: 50px;
@@ -529,6 +548,16 @@ section {
 .section-05 .collabo_wrap .history li {
     font-size: 1.8rem;
     color: #818181;
+    cursor: pointer;
+}
+
+.section-05 .collabo_wrap .history li:hover {
+    color: #424242;
+}
+
+.section-05 .collabo_wrap .history li.active {
+    color: #F67145;
+    font-weight: 600;
 }
 
 .section-05 .image_wrap {
@@ -546,7 +575,6 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(2px);
 }
 
 .section-05 .image p {
@@ -566,7 +594,7 @@ section {
     display: none;
 }
 
-.section-05 .image:first-child {
+.section-05 .image.active {
     display: block;
 }
 
@@ -615,6 +643,7 @@ section {
 .section-06 .inner .title h3 {
     position: relative;
 }
+
 .section-06 .inner .title h3::before {
     content: '';
     width: 220px;
@@ -666,6 +695,7 @@ section {
 .footer {
     border-top: 1px solid #818181;
 }
+
 .footer .inner {
     display: flex;
     justify-content: space-between;
@@ -677,14 +707,17 @@ section {
     font-weight: 600;
     margin-bottom: 40px;
 }
+
 .footer .inner .left p:last-child {
     margin-bottom: 0;
 }
+
 .footer .inner .right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .footer .inner .right a {
     display: flex;
     align-items: center;
@@ -697,9 +730,11 @@ section {
     font-weight: 700;
     color: #F67145;
 }
+
 .footer .inner .right span {
     display: block;
 }
+
 .footer .inner .right .copy {
     font-size: 1.4rem;
     color: #818181;
@@ -753,6 +788,51 @@ section {
 
     .section-01 .inner .image .text {
         padding: 0 24px 24px 0;
+    }
+
+    .section-03 .main_image {
+        position: static;
+        transform: translate(0, 0);
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-03 .inner .info_wrap {
+        display: block;
+    }
+
+    .section-03 .inner .info_wrap .vertical {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .section-03 .inner .main_image img {
+        width: auto;
+    }
+
+    .section-03 .inner .info_wrap .info {
+        transform: translateX(0) !important;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .section-03 .inner .info_wrap .vertical {
+        display: block;
+    }
+
+    .section-03 .inner .info_wrap .vertical .info img {
+        width: auto;
+    }
+
+    .section-03 .inner .info_wrap .info .line_wrap {
+        display: none;
+    }
+
+    .section-03 .inner .info_wrap .info .line_wrap p::before,
+    .section-03 .inner .info_wrap .info .line_wrap p::after {
+        display: none;
     }
 
     .section-05 .image p {
@@ -859,6 +939,10 @@ section {
         margin-bottom: 20px;
     }
 
+    .section-02 .inner .title h3::before {
+        left: 21%;
+    }
+
     .section-02 .inner::before {
         display: none;
     }
@@ -874,6 +958,10 @@ section {
         width: 100%;
         padding: 0;
         padding-top: 12px;
+    }
+
+    .section-03 .inner .info_wrap .vertical .info img {
+        width: 30%;
     }
 
     .section-05 .title_wrap .title {
@@ -957,6 +1045,10 @@ section {
 
     .section-05 .title_wrap {
         display: block;
+    }
+
+    .section-05 .image p {
+        font-size: 2rem;
     }
 
     .section-05 .title_wrap .title {

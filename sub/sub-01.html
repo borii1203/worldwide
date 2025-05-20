@@ -10,10 +10,25 @@
     <script src="../lib/jquery-3.7.1.min.js"></script>
     <script>
         $(function () {
+            let prevScrollBar = 0;
+
             $(window).on('scroll', function () {
                 let scrollBar = $(this).scrollTop();
 
-                console.log(scrollBar);
+                //console.log(scrollBar);
+
+                if (scrollBar > prevScrollBar) {
+                    $('.header').addClass('scrolled');
+                } else {
+                    $('.header').removeClass('scrolled');
+                }
+                prevScrollBar = scrollBar;
+
+                if (scrollBar >= 700) {
+                    $('.header').addClass('invert');
+                } else {
+                    $('.header').removeClass('invert');
+                };//스크롤 시 헤더 색 변경
 
                 if (scrollBar >= 2000) {
                     $('.sec02_line').addClass('scrollE');
@@ -23,6 +38,20 @@
                     $('.sec06_line').addClass('scrollE');
                 }
             });//스크롤 시 라인이벤트
+
+            $(function () {
+                let list = $('.section-05 .history li')
+                let image = $('.section-05 .image_wrap .image')
+
+                list.on('click', function () {
+                    let i = list.index(this);
+                    console.log(i);
+                    list.removeClass('active');
+                    $(this).addClass('active');
+                    image.removeClass('active');
+                    image.eq(i).addClass('active');
+                });//list클릭
+            });//콜라보섹션 탭메뉴
         });//script end
     </script>
 </head>
@@ -31,7 +60,7 @@
     <header class="header">
         <div class="inner">
             <h1 class="logo">
-                <img src="../img/sub_img/RAWROW.svg" alt="RAWROW">
+                <a href="#"><img src="../img/sub_img/RAWROW.svg" alt="RAWROW"></a>
             </h1>
 
             <nav class="nav pc">
@@ -149,9 +178,10 @@
 
                                 <div class="line_wrap">
                                     <p></p>
-                                    <svg class="line" width="100%" height="auto" viewBox="0 0 392 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M392 1H228.928V269H0" stroke="#818181"/>
-</svg>
+                                    <svg class="line" width="100%" height="auto" viewBox="0 0 392 270" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M392 1H228.928V269H0" stroke="#818181" />
+                                    </svg>
 
                                 </div><!-- .line_wrap end -->
                             </div><!-- .info end -->
@@ -168,9 +198,10 @@
 
                                 <div class="line_wrap">
                                     <p></p>
-                                    <svg class="line" width="auto" height="300" viewBox="0 0 180 258" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 257H80.2228V1H180" stroke="#818181" stroke-width="0.5"/>
-</svg>
+                                    <svg class="line" width="auto" height="300" viewBox="0 0 180 258" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 257H80.2228V1H180" stroke="#818181" stroke-width="0.5" />
+                                    </svg>
 
                                 </div><!-- .line_wrap end -->
                             </div><!-- .info end -->
@@ -186,9 +217,10 @@
 
                                 <div class="line_wrap">
                                     <p></p>
-                                    <svg class="line" width="100%" height="auto" viewBox="0 0 210 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.5 1H46V39.5H209.5" stroke="#818181" stroke-width="0.5"/>
-</svg>
+                                    <svg class="line" width="100%" height="auto" viewBox="0 0 210 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 1H46V39.5H209.5" stroke="#818181" stroke-width="0.5" />
+                                    </svg>
 
                                 </div><!-- .line_wrap end -->
                             </div><!-- .info end -->
@@ -230,7 +262,7 @@
                             <h6>2022</h6>
 
                             <ol>
-                                <li>HELINOX</li>
+                                <li class="active">TOMMY HILFIGER</li>
                             </ol>
                         </div>
 
@@ -254,7 +286,7 @@
                     </div><!-- history end -->
 
                     <div class="image_wrap">
-                        <div class="image">
+                        <div class="image active">
                             <img src="../img/sub_img/sec05-01.png" alt="">
                             <p>TOMMY HILFIGER X RAWROW<br>
                                 수납과 이동을 고민해온 로우로우와<br>
