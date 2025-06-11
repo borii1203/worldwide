@@ -43,6 +43,8 @@ section {
     width: 100%;
     position: fixed;
     z-index: 999;
+        transform: translateY(0);
+    transition: 0.2s;
 }
 
 .banner {
@@ -51,6 +53,10 @@ section {
     background-color: #F67145;
     display: flex;
     position: relative;
+}
+
+.header_wrap.scroll_up {
+    transform: translateY(-32px);
 }
 
 .banner span {
@@ -186,6 +192,7 @@ section {
     color: #4C4C4C;
     margin-top: 8px;
 }
+
 .header .btn_wrap {
     display: flex;
 }
@@ -203,6 +210,50 @@ section {
 
 .header .btn_wrap .mobile {
     display: none;
+}
+
+.search_box {
+    width: 100%;
+    height: 300px;
+    background-color: #EDEDED;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.search_box .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.search_box img {
+    display: block;
+    width: 35px;
+}
+
+.search_box input {
+    width: 80%;
+    height: 28px;
+    margin-right: auto;
+    padding-left: 12px;
+}
+
+.search_box .box_search_ico {
+    padding-right: 10px;
+}
+
+.search_box .close_btn {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    cursor: pointer;
+}
+
+button, input, optgroup, select, textarea {
+    border: 0;
 }
 
 

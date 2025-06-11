@@ -254,8 +254,9 @@
 }
 
 .section-05 .image_wrap img {
-    width: 18.93%;
-    height: 18.93vw;
+    width: 19%;
+    max-height: 266px;
+    height: 100%;
     object-fit: cover;
     display: block;
     object-position: top;
