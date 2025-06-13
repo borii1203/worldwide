@@ -269,7 +269,7 @@
         font-size: 56.25%;
     }
     .main_visaul {
-        height : 600px
+        height : 600px;
     }
 
     .section-02 .item_wrap .image {
@@ -328,7 +328,7 @@
         font-size: 3rem;
     }
     .main_visaul {
-        height : 400px
+        height : 400px;
     }
 
     .section-03 {
@@ -382,7 +382,7 @@
 
 @media screen and (max-width:500px) {
     .main_visaul {
-        height : 480px
+        height : 480px;
     }
     .section-05 .lookbook_wrap {
         row-gap: 10px;
