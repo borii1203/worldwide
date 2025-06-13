@@ -268,7 +268,7 @@
     body {
         font-size: 56.25%;
     }
-    .main_visaul {
+    .main_visual {
         height : 600px;
     }
 
@@ -327,7 +327,7 @@
     .title h3 {
         font-size: 3rem;
     }
-    .main_visaul {
+    .main_visual {
         height : 400px;
     }
 
@@ -381,7 +381,7 @@
 }
 
 @media screen and (max-width:500px) {
-    .main_visaul {
+    .main_visual {
         height : 480px;
     }
     .section-05 .lookbook_wrap {
