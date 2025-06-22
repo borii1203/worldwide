@@ -13,17 +13,17 @@ $(function () {
         prevScrollBar = scrollBar;
     });//배너 스크롤 시에 사라지게
 
-    $('.header .nav_wrap .gnb > li').on('mouseenter', function () {
+    $(document).on('mouseenter','.header .nav_wrap .gnb > li', function () {
         $(this).find('.subMenu_wrap').addClass('open')
-    }).on('mouseleave', function () {
+    }).on('mouseleave','mouseenter','.header .nav_wrap .gnb > li', function () {
         $(this).find('.subMenu_wrap').removeClass('open')
     });//2차 메뉴 열림
 
-    $('.search_ico').on('click', function () {
+    $(document).on('click','.search_ico', function () {
         $('.search_box').show();
     });//검색박스 열림
 
-    $('.close_btn').on('click', function () {
+    $(document).on('click','.close_btn',function () {
         $('.search_box').hide();
     })//검색박스 닫힘
 });//script end
