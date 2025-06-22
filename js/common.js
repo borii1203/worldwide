@@ -15,7 +15,7 @@ $(function () {
 
     $(document).on('mouseenter','.header .nav_wrap .gnb > li', function () {
         $(this).find('.subMenu_wrap').addClass('open')
-    }).on('mouseleave','mouseenter','.header .nav_wrap .gnb > li', function () {
+    }).on('mouseleave','.header .nav_wrap .gnb > li', function () {
         $(this).find('.subMenu_wrap').removeClass('open')
     });//2차 메뉴 열림
 
