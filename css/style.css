@@ -231,8 +231,12 @@
 }
 
 .section-04 .card_wrap .card span {
+    display: -webkit-box;
     font-size: 2.4rem;
-     word-break: keep-all;     
+    word-break: keep-all;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
 }
 
 .section-04 .card_wrap .card:nth-child(3)::after {
@@ -268,8 +272,9 @@
     body {
         font-size: 56.25%;
     }
+
     .main_visual {
-        height : 600px;
+        height: 600px;
     }
 
     .section-02 .item_wrap .image {
@@ -327,8 +332,9 @@
     .title h3 {
         font-size: 3rem;
     }
+
     .main_visual {
-        height : 400px;
+        height: 400px;
     }
 
     .section-03 {
@@ -375,6 +381,7 @@
     .footer .inner {
         padding-block: 40px;
     }
+
     .footer .inner .right .sns_wrap img {
         width: 24px;
     }
@@ -382,8 +389,9 @@
 
 @media screen and (max-width:500px) {
     .main_visual {
-        height : 480px;
+        height: 480px;
     }
+
     .section-05 .lookbook_wrap {
         row-gap: 10px;
     }

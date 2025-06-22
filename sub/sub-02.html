@@ -5,19 +5,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상세페이지</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/sub-02.css">
+
     <script src="../lib/jquery-3.7.1.min.js"></script>
     <script src="../js/sub.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
     <div id="wrap">
-        <header class="header_wrap">
-        </header><!-- .header_wrap end -->
-        <main class="main">
+        <header class="header_wrap"></header><!-- .header_wrap end -->
+
+        <main class="detail">
+            <div class="inner">
+                <nav class="breadcrumb">
+                    <ul>
+                        <li><a href="#">RAWROW</a></li>
+                        <li><a href="#">TRUNK</a></li>
+                        <li><a href="#">FRAME</a></li>
+                    </ul>
+                </nav>
+
+                <div class="product_detail">
+                    <div class="main_thumbnail">
+                        <!-- Swiper -->
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                            class="swiper mainSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb01.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb02.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb03.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb04.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb05.jpg" />
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div><!-- .mainSwiper end -->
+
+                        <div thumbsSlider="" class="swiper subSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb01.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb02.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb03.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb04.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/sub_thumb05.jpg" />
+                                </div>
+                            </div><!-- .swiper-wrapper end -->
+                        </div><!-- .subSwiper end -->
+
+                        <div class="detail_start">
+                            <div id="detail_info">
+                                <div class="tabProduct">
+                                    <ul>
+                                        <li class="selected"><a href="#detail_info">상품 상세 정보</a></li>
+                                        <li><a href="#deliver">배송 및 반품</a></li>
+                                        <li><a href="#review">리뷰<span>(2)</span></a></li>
+                                    </ul>
+                                </div><!-- .tabProduct end -->
+
+                                <div class="detail_info">
+                                    <img src="../img/detail01.jpg" alt="">
+                                    <img src="../img/detail02.jpg" alt="">
+                                    <img src="../img/detail03.jpg" alt="">
+                                    <img src="../img/detail03-1.gif" alt="">
+                                    <img src="../img/detail04.jpg" alt="">
+                                    <img src="../img/detail04-1.webp" alt="">
+                                    <img src="../img/detail05.jpg" alt="">
+                                    <img src="../img/detail05-1.gif" alt="">
+                                    <img src="../img/detail06.jpg" alt="">
+                                    <img src="../img/detail06-1.webp" alt="">
+                                    <img src="../img/detail07.webp" alt="">
+                                    <img src="../img/detail08.webp" alt="">
+                                    <img src="../img/detail09.webp" alt="">
+                                    <img src="../img/detail10.jpg" alt="">
+                                    <img src="../img/detail11.jpg" alt="">
+                                    <img src="../img/detail12.jpg" alt="">
+                                </div><!-- .detail_info end -->
+                            </div>
+
+                            <div id="deliver">
+                                <div class="tabProduct">
+                                    <ul>
+                                        <li><a href="#detail_info">상품 상세 정보</a></li>
+                                        <li class="selected"><a href="#deliver">배송 및 반품</a></li>
+                                        <li><a href="#review">리뷰 <span>(2)</span></a></li>
+                                    </ul>
+                                </div><!-- .tabProduct end -->
+
+                                <div class="deliver">
+                                    <strong>[교환 및 배송안내]</strong>
+
+                                    <ol>
+                                        <li>1. 결제 후 3영업일 내 순차 출고 됩니다.</li>
+                                        <li>2. 배송기간은 평균 2일~4일 소요 됩니다.</li>
+                                        <li>3. CJ택배(1588-1255)로 발송되며, 변심 교환/반품 시 직접 접수 부탁드립니다.</li>
+                                        <li>4. 브랜드 별로 출고되며, 상품에 따라 합배송이 불가할 수 있습니다.</li>
+                                        <li>5. 상품 수령 후, 7일 이내 교환 및 반품접수가 가능합니다.</li>
+                                        <li>6. 네이버페이를 통한 반품 자동수거를 지원하지 않습니다.</li>
+                                        <li>7. 타 택배로 착불 발송 시, 추가 발생요금은 고객부담입니다.</li>
+                                    </ol>
+
+                                    <strong>[교환 및 반품 주소]</strong>
+                                    <ol>
+                                        <li>CJ택배 (착불접수) : 경기도 남양주시 수동면 비룡로 940 유피로지스 월드와이드월드</li>
+                                        <li>타택배사 (선불접수) : 서울특별시 성동구 성수이로 89 MG빌딩 2층 RCC</li>
+                                    </ol>
+                                </div><!-- .deliver end -->
+                            </div><!-- #deliver -->
+
+                            <div id="review">
+                                <div class="tabProduct">
+                                    <ul>
+                                        <li><a href="#detail_info">상품 상세 정보</a></li>
+                                        <li><a href="#deliver">배송 및 반품</a></li>
+                                        <li class="selected"><a href="#review">리뷰 <span>(2)</span></a></li>
+                                    </ul>
+                                </div><!-- .tabProduct end -->
+
+                                <div class="image_wrap">
+                                    <p>포토&동영상<strong>(2)</strong></p>
+                                    <div class="small_image">
+                                        <div class="image"><img src="../img/review01.jpg" alt=""></div>
+                                        <div class="image"><img src="../img/review02.jpg" alt=""></div>
+                                    </div><!-- .small_image end -->
+                                </div><!-- .image_wrap end -->
+
+                                <div class="review_wrap">
+                                    <p>리뷰<strong>(2)</strong></p>
+                                </div><!-- .review_wrap end -->
+                            </div><!-- #review -->
+                        </div><!-- .detail_start end -->
+                    </div><!-- .main_thumbnail end -->
+
+                    <div class="option">
+                        <div class="main_info">
+                            <div class="name_b">
+                                <span>[RAWROW] FRAME</span>
+                                <img src="../img/like.png" alt="like">
+                            </div><!-- .name_b end -->
+
+                            <p class="name">LITE ep.3 37L+72L/ 20+27" SET</p>
+                        </div><!-- .main_info end -->
+
+                        <div class="color_wrap">
+                            <p>COLOR</p>
+                            <ol class="selector">
+                                <li  class="selected"><a href="#"><img src="../img/sec01-01.png" alt="color black"></a></li>
+                                <li><a href="#"><img src="../img/other_color_black.jpg" alt="color black"></a></li>
+                                <li><a href="#"><img src="../img/other_color_ivory.jpg" alt="color ivory"></a></li>
+                                <li><a href="#"><img src="../img/other_color_green.jpg" alt="color green"></a></li>
+                                <li><a href="#"><img src="../img/other_color_mustard.jpg" alt="color mustard"></a></li>
+                            </ol><!-- .selector end -->
+                        </div><!-- .color_wrap end -->
+
+                        <div class="value">
+                            <span class="real_price">439,000원</span>
+
+                            <div class="sale_price">
+                                <span class="price">399,490원</span>
+                                <span class="percent">9%</span>
+                            </div>
+                        </div><!-- .price end -->
+
+                        <div class="select_wrap">
+                            <select name="color_select" id="color">
+                                <option value="">- [필수] 옵션을 선택해 주세요 -</option>
+                                <option value="">-------------------</option>
+                                <optgroup label="색상">
+                                    <option value="BLACK">BLACK</option>
+                                    <option value="IVORY">IVORY</option>
+                                    <option value="SAGE GREEN">SAGE GREEN</option>
+                                    <option value="PRUPLE">PRUPLE</option>
+                                    <option value="MUSTARD">MUSTARD</option>
+                                </optgroup>
+                            </select>
+                        </div><!-- .select_wrap end -->
+
+                        <div class="btn_wrap">
+                            <button class="add_cart">장바구니 담기</button>
+                            <button class="buy_now">바로구매</button>
+                        </div><!-- .btn_wrap end -->
+                    </div><!-- .option end -->
+                </div><!-- .product_detail end -->
+            </div><!-- .inner end -->
         </main><!-- .main end -->
-        <footer class="footer">
-            </footer><!-- .footer end -->
+
+        <footer class="footer"></footer><!-- .footer end -->
     </div><!-- #wrap end -->
 </body>
 
